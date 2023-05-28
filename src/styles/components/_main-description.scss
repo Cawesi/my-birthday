@@ -1,109 +1,117 @@
 @use 'variables';
 
 .main__container {
-    padding: 0 56px;
+    padding-top: 100px;
 
-    &__description {
-        max-width: 600px;
-        margin-bottom: 32px;
-        padding: 100px 0 30px 80px;
-        background-color: blue;
+    &__box {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "sideA sideB";
 
-        &__title {
-            width: 350px;
-            font-size: 2.3em;
-            margin-bottom: 24px;
+        &__description {
+            width: 600px;
+            padding: 0 0 24px 80px;
+    
+            &__box {
+    
+                &__title {
+                    width: 350px;
+                    font-size: 2.3em;
+                    margin-bottom: 24px;
+                }
+    
+                &__paragraph {
+                    width: 400px;
+                    display: flex;
+                    row-gap: 16px;
+                    flex-direction: column; 
+                }
+            }
         }
-
-        &__paragraph {
-            width: 400px;
+    
+        &__image--contador {
             display: flex;
-            row-gap: 16px;
-            flex-direction: column;
+            justify-content: center;
         }
     }
 
-    &__buttons {
-        width: 600px;
-        display: flex;
-        column-gap: 48px;
-        justify-content: space-evenly;
+    &__box__buttons {
+        padding-left: 80px;
 
-        &__playlist {
-            width: 120px;
-            padding: 8px;
-            text-align: center;
+        &__content {
+            padding: 24px 16px 24px 0;
 
-            border-radius: 20px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            -ms-border-radius: 20px;
-            -o-border-radius: 20px;
-
-            background-image: linear-gradient(135deg, #1B2C22, #013392);
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        &__know__more {
             display: flex;
-            column-gap: 8px;
+            column-gap: 64px;
             align-items: center;
 
-            & > div {
+            &__playlist {
                 display: flex;
-                column-gap: 8px;
                 align-items: center;
+                justify-content: center;
+                
+                width: 120px;
+                height: 36px;
+                padding: 8px;
+                text-align: center;
+                border-radius: 20px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+
+                background-color: #6857d2;
 
                 &:hover {
                     cursor: pointer;
                 }
             }
-        }
-    }
 
-    &__guests {
-        margin-top: 30px;
-        padding: 14px 12px;
-        background-color: rgba(0, 0, 0, 0.30);
+            &__know__more {
+                display: flex;
+                align-items: center;
 
-        border-radius: 26px;
-        -webkit-border-radius: 26px;
-        -moz-border-radius: 26px;
-        -ms-border-radius: 26px;
-        -o-border-radius: 26px;
-
-        &__card {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-
-            &__status {
-
-                & > ul {
+                & > a {
                     display: flex;
-                    column-gap: 32px;
-                    text-align: center;
+                    column-gap: 14px;
+                    justify-content: center;
+
+                    & > div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
 
-            &__status__confirmed {
+            &__counter {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                flex-grow: 1;
+
+                padding: 16 12px;
+                margin-left: 100px;
+                background-color: black;
+
+                border-radius: 16px;
+                -webkit-border-radius: 16px;
+                -moz-border-radius: 16px;
+                -ms-border-radius: 16px;
+                -o-border-radius: 16px;
             }
         }
     }
 }
 
-.img--follow {
-    height: 64px;
+.djimage {
+    height: 300px;
 }
 
-.guest--value {
-    margin-top: 8px;
-    font-size: 24px;
+.main__container__description {
+    grid-area: sideA;
+}
+
+.main__container__image--contador {
+    grid-area: sideB;
 }

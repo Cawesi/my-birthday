@@ -12,10 +12,15 @@
 .container {
     max-width: 1280px;
     width: 100%;
-    min-height: 600px;
-    background-color: red;
-
     margin: 0 auto;
+}
+
+.main__container {
+    background-image: url("../images/night-sky.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 24px;
 }
 
 
