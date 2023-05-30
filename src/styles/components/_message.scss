@@ -3,4 +3,20 @@
 .message {
     font-size: .6em;
     padding: 8px 16px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.messagem__moved {
+    position: relative;
+    animation-name: message;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes message {
+    from {left: 0%;}
+    to {left: 100%;}
 }
