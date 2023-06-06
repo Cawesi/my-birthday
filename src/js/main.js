@@ -16,7 +16,8 @@ const contaTempo = setInterval(function(){
     const minutos = Math.floor((distanciaEvento % horaEmMs) / minutoEmMs);
     const segundosAteEvento = Math.floor((distanciaEvento % minutoEmMs) / 1000);
 
-    document.getElementById('contador').innerHTML = `Faltam apenas - ${dias} dias ${horas} horas ${minutos} minutos ${segundosAteEvento} segundos`;
+    document.getElementById('contador').innerHTML = `Faltam - ${dias} d. ${horas} hrs. ${minutos} min. ${segundosAteEvento} seg.`;
+    document.getElementById('contador2').innerHTML = `Faltam  - ${dias} d. ${horas} hrs. ${minutos} min. ${segundosAteEvento} seg.`;
 
     if (distanciaEvento < 0) {
         clearInterval(contaTempo);
